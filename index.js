@@ -6,7 +6,7 @@ const cors = require('cors');
 const routes = require('./routes/routes');
 
 const database_url = process.env.DATABASE_URL;
-const app_port = process.env.APP_PORT;
+const app_port = process.env.APP_PORT || 5000;
 
 mongoose.connect(database_url);
 const db = mongoose.connection;
